@@ -5,12 +5,14 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 def encode_text(data):
-	# This function converts the data into type 'str'.
+    #This function converts the data into type 'str'.
     try:
-        text = encode_text(data)
-    except:
         text = data.encode("UTF-8")
+    except Exception as e:
+        return data
     return text
+
+
 
 if __name__ == "__main__":
 	
