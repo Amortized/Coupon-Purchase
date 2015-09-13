@@ -38,4 +38,4 @@ if __name__ == "__main__":
 		df = pd.read_csv(path + f + '.csv')
 		df['CAPSULE_TEXT'] = [ capsuleText[encode_text(x)] for x in df['CAPSULE_TEXT'] ]
 		df['GENRE_NAME'] = [ genreName[encode_text(x)] for x in df['GENRE_NAME'] ]
-		df.to_csv(f + '_translated.csv',index = False)
+		df.to_csv(path + f + '_translated.csv',index = False)
